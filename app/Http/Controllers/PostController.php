@@ -7,12 +7,15 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index(){
-        $allPosts=[
-        ];
+        $allPosts=[];
         return view(view:'posts.index');
     }
     public function show(){
 
         return view(view:'posts.show') ;
+    }
+    public function create(){
+        
+        return view(view:'posts.create');
     }
 }
