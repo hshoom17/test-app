@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index()
-    {
+    {   //test
         $postsFromDB=Post::all();
         return view('posts.index', ['posts' => $postsFromDB]);
     }
