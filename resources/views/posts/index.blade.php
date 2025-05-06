@@ -1,8 +1,16 @@
 <x-layout>
     
  @section('title') Index @endsection
- 
- 
+    
+    <div>
+        <form action="{{ route('posts.index') }}" method="GET">
+        <input type="text" name="search" placeholder="Search Posts">
+        <button type="submit">Search</button>
+        
+        
+    </form>
+    </div>   
+
      <div class="text-center">
          <a href="{{route('posts.create')}}" class="btn btn-success">Create Post</a>
      </div>

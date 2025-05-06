@@ -6,11 +6,14 @@ use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
 
+use function Pest\Laravel\post;
+
 class PostController extends Controller
 {
-    public function index()
-    {   //test
+    public function index(Post $post)
+    {   
         $postsFromDB=Post::all();
+
         return view('posts.index', ['posts' => $postsFromDB]);
     }
 
@@ -94,6 +97,13 @@ class PostController extends Controller
 
         return to_route(route:'posts.index',parameters:$postId);
     }
+//     public function search(Request $request)
+// {
+// //     $search = $request->input('search');
+// //     $results = Post::where('name', 'like', "%$search%")->get();
+
+// //     return view('posts.index', ['results' => $results]);
+// // 
 
 
 }
